@@ -1,8 +1,9 @@
 import React from "react";
 import "./style.css";
+const questions = require("../../data/questions");
 
 function DrinkRule() {
-  return <div>this is drink rule test</div>;
+  return <div>{questions}</div>;
 }
 
 export default DrinkRule;
