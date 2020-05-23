@@ -1,9 +1,14 @@
 import React from "react";
 import "./style.css";
-const questions = require("../../data/questions");
 
-function DrinkRule() {
-  return <div>{questions}</div>;
+function DrinkRule(props) {
+  return (
+    <div>
+      <NextButton result={result} />
+    </div>
+  );
 }
 
 export default DrinkRule;
+
+//This will be used at Game component
