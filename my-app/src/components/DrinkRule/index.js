@@ -2,11 +2,7 @@ import React from "react";
 import "./style.css";
 
 function DrinkRule(props) {
-  return (
-    <div>
-      <NextButton result={result} />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default DrinkRule;
