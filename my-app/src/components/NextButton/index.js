@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 
-function NextButton() {
+//props to pass in variables and functions from App.js
+function NextButton(props) {
   return (
     <div>
-      <button onclick="removeQuestion()">Next</button>
+      <button onClick={() => props.nextQuestion}>Next</button>
     </div>
   );
 }

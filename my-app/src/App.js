@@ -16,13 +16,21 @@ class App extends Component {
     let chosenArrayElement = Math.floor(Math.random() * questionsArray.length);
     let result = questionsArray[chosenArrayElement];
     questionsArray.splice(chosenArrayElement, 1);
+    console.log(
+      "Inside nextQuestion function: " +
+        chosenArrayElement +
+        "||||" +
+        result +
+        "||||" +
+        questionsArray
+    );
   };
 
   render() {
     return (
       <div className="App">
-        <Game />
-        <NextButton />
+        <Game drinkRule={this.result} />
+        <NextButton nextQuestion={this.nextQuestion} />
       </div>
     );
   }

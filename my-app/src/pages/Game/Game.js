@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import "./style.css";
-import DrinkRule from "../../components/DrinkRule";
+//import DrinkRule from "../../components/DrinkRule";
 
-class Game extends Component {
-  render() {
-    return (
-      <div>
-        <DrinkRule />
-      </div>
-    );
-  }
+function Game(props) {
+  return (
+    <div>
+      <div>{props.DrinkRule}</div>
+    </div>
+  );
 }
 export default Game;

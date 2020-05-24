@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-function DrinkRule(props) {
+function DrinkRule() {
   return <div></div>;
 }
 
 export default DrinkRule;
 
-//This will be used at Game component
+//This MIGHT be used at Game component
