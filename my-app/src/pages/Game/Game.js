@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import "./style.css";
 //import DrinkRule from "../../components/DrinkRule";
 
 function Game(props) {
   return (
-    <div>
-      <div>{props.DrinkRule}</div>
+    <div class="gameCenter">
+      <div class="gameText">{props.DrinkRule}</div>
     </div>
   );
 }

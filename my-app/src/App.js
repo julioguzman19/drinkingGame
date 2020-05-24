@@ -18,17 +18,6 @@ class App extends Component {
     result = questionsArray[chosenArrayElement];
     questionsArray.splice(chosenArrayElement, 1);
     this.setState({ result: result }); //this state of result to the new result
-
-    console.log(
-      "Inside nextQuestion function: " +
-        chosenArrayElement +
-        "||||" +
-        result +
-        "||||" +
-        questionsArray +
-        "|||||||||||||||||||" +
-        this.state.result
-    );
   };
 
   render() {
