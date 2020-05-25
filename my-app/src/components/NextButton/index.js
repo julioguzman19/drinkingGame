@@ -4,7 +4,7 @@ import "./style.css";
 //props to pass in variables and functions from App.js
 function NextButton(props) {
   return (
-    <div class="buttonCenter">
+    <div>
       <button class="buttonSize" onClick={props.nextQuestion}>
         Next
       </button>
