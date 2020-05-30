@@ -14,7 +14,7 @@ class App extends Component {
   nextQuestion = () => {
     let result = this.state.result;
     let chosenArrayElement = Math.floor(Math.random() * questionsArray.length);
-    result = questionsArray[chosenArrayElement].replace(":", "<br>");
+    result = questionsArray[0]; //change zero to chosenArray Element once tested
 
     questionsArray.splice(chosenArrayElement, 1);
     this.setState({ result: result }); //this state of result to the new result
