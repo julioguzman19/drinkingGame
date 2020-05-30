@@ -1,5 +1,10 @@
-let questionsArray = [
-  "EVERYBODY {test} For you Assholes, take a drink for every letter 'a' in your name. Person who pulled this card time for you to be the asshole and GIVE that # of drinks.",
+let questionsArray = {
+  individual: ["indi rule1", "indi rule2"],
+  everybody: ["every rule 1", "every rule2"],
+};
+
+/* let questionsArray = [
+  "EVERYBODY: For you Assholes, take a drink for every letter 'a' in your name. Person who pulled this card time for you to be the asshole and GIVE that # of drinks.",
   "INDIVIDUAL: If you had cereal this week, drink as many times as you had it to offset those carbs. If none, drink as many times as you had water today to balance out those carbs.",
   "EVERYBODY: If you touch your phone this round take a drink and have the person who pulled this card send a text. Hopefully this teaches you a lesson on touching... idiot!",
   "EVERYBODY: QUICK! Last person to take a drink has to take 5 drinks. Must be nice to be quick...that's what she said.",
@@ -25,7 +30,7 @@ let questionsArray = [
   "Enter rule here",
   "Enter rule here",
 ];
-
+ */
 module.exports = questionsArray;
 
 //This will be used at Next Button component

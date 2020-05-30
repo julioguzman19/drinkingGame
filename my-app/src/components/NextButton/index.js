@@ -5,7 +5,7 @@ import "./style.css";
 function NextButton(props) {
   return (
     <div>
-      <button class="buttonSize" onClick={props.nextQuestion}>
+      <button className="buttonSize" onClick={props.nextQuestion}>
         Next
       </button>
     </div>
