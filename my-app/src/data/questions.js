@@ -1,4 +1,4 @@
-let questionsArray = {
+let questionsObject = {
   individual: ["indi rule1", "indi rule2"],
   everybody: ["every rule 1", "every rule2"],
 };
@@ -31,6 +31,6 @@ let questionsArray = {
   "Enter rule here",
 ];
  */
-module.exports = questionsArray;
+module.exports = questionsObject;
 
 //This will be used at Next Button component

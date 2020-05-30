@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import NextButton from "./components/NextButton/index";
-let questionsArray = require("../src/data/questions");
+let questionsObject = require("../src/data/questions");
 
 class App extends Component {
   state = {
-    questionsArray,
+    questionsObject,
     chosenArrayElement: null,
     result: null,
   };
@@ -20,8 +20,8 @@ class App extends Component {
 
     //------------LOGIC IF BOTH ARRAYS HAVE ELEMENTS------------//
     if (
-      questionsArray.individual.length > 0 &&
-      questionsArray.everybody.length > 0
+      questionsObject.individual.length > 0 &&
+      questionsObject.everybody.length > 0
     ) {
       //CHOOSING 0 OR 1 WHICH WE WILL USE TO DETERMINE GAME
       chosenGameElement = Math.round(Math.random());
@@ -30,50 +30,45 @@ class App extends Component {
       if (chosenGameElement === 0) {
         //CHOOSING ELEMENT POSITION IN INDIVIDUAL ARRAY
         chosenArrayElement = Math.floor(
-          Math.random() * questionsArray.individual.length
+          Math.random() * questionsObject.individual.length
         );
         //SETTING RESULT TO CHOSEN ELEMENT
-        result = questionsArray.individual[chosenArrayElement];
+        result = "Invididual " + questionsObject.individual[chosenArrayElement];
         //DELETING CHOSEN ITEM FROM ARRAY
-        questionsArray.individual.splice(chosenArrayElement, 1);
+        questionsObject.individual.splice(chosenArrayElement, 1);
       }
       //IF 1 THEN CHOOSE FROM EVERYBODY ARRAY
       if (chosenGameElement === 1) {
         //CHOOSING ELEMENT POSITION IN EVERYBODY ARRAY
         chosenArrayElement = Math.floor(
-          Math.random() * questionsArray.everybody.length
+          Math.random() * questionsObject.everybody.length
         );
         //SETTING RESULT TO CHOSEN ELEMENT
-        result = questionsArray.everybody[chosenArrayElement];
+        result = "Everybody " + questionsObject.everybody[chosenArrayElement];
         //DELETING CHOSEN ITEM FROM ARRAY
-        questionsArray.everybody.splice(chosenArrayElement, 1);
+        questionsObject.everybody.splice(chosenArrayElement, 1);
       }
     }
     //------------LOGIC IF INDIVIDUAL ONLY HAS ELEMENTS------------//
-    else if (questionsArray.individual.length > 0) {
+    else if (questionsObject.individual.length > 0) {
       chosenArrayElement = Math.floor(
-        Math.random() * questionsArray.individual.length
+        Math.random() * questionsObject.individual.length
       );
-      result = questionsArray.individual[chosenArrayElement];
-      questionsArray.individual.splice(chosenArrayElement, 1);
+      result = questionsObject.individual[chosenArrayElement];
+      questionsObject.individual.splice(chosenArrayElement, 1);
     }
     //------------LOGIC IF EVERYBODY ONLY HAS ELEMENTS------------//
-    else if (questionsArray.everybody.length > 0) {
+    else if (questionsObject.everybody.length > 0) {
       chosenArrayElement = Math.floor(
-        Math.random() * questionsArray.everybody.length
+        Math.random() * questionsObject.everybody.length
       );
-      result = questionsArray.everybody[chosenArrayElement];
-      questionsArray.everybody.splice(chosenArrayElement, 1);
-    } else {
+      result = questionsObject.everybody[chosenArrayElement];
+      questionsObject.everybody.splice(chosenArrayElement, 1);
+    }
+    //------------GAME OVER------------//
+    else {
       result = "GAME IS OVER!";
     }
-
-    /* let chosenArrayElement = Math.floor(Math.random() * questionsArray.length);
-    result = questionsArray[0]; //change zero to chosenArray Element once tested
-    
-    questionsArray.splice(chosenArrayElement, 1); */
-    console.log("individual: " + questionsArray.individual);
-    console.log("everybody: " + questionsArray.everybody);
     this.setState({ result: result }); //this state of result to the new result
   };
 
