@@ -33,7 +33,7 @@ class App extends Component {
           Math.random() * questionsObject.individual.length
         );
         //SETTING RESULT TO CHOSEN ELEMENT
-        result = "Invididual " + questionsObject.individual[chosenArrayElement];
+        result = questionsObject.individual[chosenArrayElement];
         //DELETING CHOSEN ITEM FROM ARRAY
         questionsObject.individual.splice(chosenArrayElement, 1);
       }
@@ -44,7 +44,7 @@ class App extends Component {
           Math.random() * questionsObject.everybody.length
         );
         //SETTING RESULT TO CHOSEN ELEMENT
-        result = "Everybody " + questionsObject.everybody[chosenArrayElement];
+        result = "Everybody: " + questionsObject.everybody[chosenArrayElement];
         //DELETING CHOSEN ITEM FROM ARRAY
         questionsObject.everybody.splice(chosenArrayElement, 1);
       }
@@ -62,7 +62,7 @@ class App extends Component {
       chosenArrayElement = Math.floor(
         Math.random() * questionsObject.everybody.length
       );
-      result = questionsObject.everybody[chosenArrayElement];
+      result = "Everybody: " + questionsObject.everybody[chosenArrayElement];
       questionsObject.everybody.splice(chosenArrayElement, 1);
     }
     //------------GAME OVER------------//
