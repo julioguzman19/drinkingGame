@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; //after installing boostrap added this
 import "./App.css";
+import Card from "./cards/Cards";
 import NextButton from "./components/NextButton/index";
 let questionsObject = require("../src/data/questions");
 
@@ -75,6 +77,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Card cardText={this.state.result} />
         <div className="gameText">{this.state.result}</div>
         <NextButton nextQuestion={this.nextQuestion} />
       </div>
